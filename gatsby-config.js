@@ -3,6 +3,9 @@ require("dotenv").config({
 })
 
 module.exports = {
+  flags: {
+    PARALLEL_QUERY_RUNNING: true
+  },
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
     title: "WishLouder.com",
