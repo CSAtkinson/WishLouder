@@ -20,8 +20,8 @@ const Header = () => {
                 </div>
                 <div className={show ? "nav-links show-links" : "nav-links"}>
                     <Link to="/" className="nav-link" activeClassName="active-link" onClick={()=> setShow(false)}>Home</Link>
-                    <Link to="/recipes" className="nav-link" activeClassName="active-link" onClick={()=> setShow(false)}>Recipes</Link>
-                    <Link to="/tags" className="nav-link" activeClassName="active-link" onClick={()=> setShow(false)}>Tags</Link>
+                    <Link to="/news" className="nav-link" activeClassName="active-link" onClick={()=> setShow(false)}>News</Link>
+                    <Link to="/entertainment" className="nav-link" activeClassName="active-link" onClick={()=> setShow(false)}>Entertainment</Link>
                     <Link to="/about" className="nav-link" activeClassName="active-link" onClick={()=> setShow(false)}>About</Link>
                     <div className="nav-link contact-link">
                         <Link to="/contact" className="btn"> Contact</Link>
