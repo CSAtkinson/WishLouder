@@ -1,27 +1,30 @@
 import React from 'react'
 
 import Layout from "../components/Layout"
-import { graphql, Link } from 'gatsby'
-import setupTags from '../utils/setupTags'
-import slugify from 'slugify'
+import { graphql, useStaticQuery } from 'gatsby'
 import Seo from "../components/SEO"
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 
-const Tags = ({data}) => {
-    const newTags = setupTags(data.allContentfulRecipe.nodes)
+
+const Entertainment = () => {    
+    const data = useStaticQuery(query)
+    const recipes = data.allContentfulMeme.nodes
     return (
         <Layout>
           <Seo title="Tags" />
             <main className="page">
+              <h1>This is where i shall keep you entertained!</h1>
                 <section className="tags-page">
-                    {newTags.map((tag, index)=>{
-                        const [text, value] = tag
-                        const slug = slugify(text, {lower:true})
-                        return(
-                            <Link to={`/tags/${slug}`} key={index} className="tag">
-                                <h5>{text}</h5>
-                                <p>{value} recipe</p>
-                            </Link>
+                    {recipes.map((text, index)=>{
+                        const {title, description, meme1} = text
+                        const pathToImage = getImage(meme1)                        
+                        return(                            
+                               <GatsbyImage 
+                                  image={pathToImage} 
+                                  className='recipe-img'
+                                  alt={title}
+                                />                            
                         )
                     })}
                 </section>
@@ -31,16 +34,18 @@ const Tags = ({data}) => {
 }
 
 export const query = graphql`
-  {
-    allContentfulRecipe {
-      nodes {
-        content {
-          tags
-        }
+{
+  allContentfulMeme {
+    nodes {
+      meme1 {
+        description
+        title
+        gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
       }
     }
   }
+}
 `
 
 
-export default Tags
+export default Entertainment

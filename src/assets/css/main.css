@@ -617,7 +617,7 @@ form > *:last-child {
     grid-template-columns: 1fr 1fr;
   }
   .recipe-img {
-    height: 10rem;
+    height: 100%;
   }
 }
 
@@ -631,7 +631,7 @@ form > *:last-child {
   }
 
   .recipe-img {
-    height: 9rem;
+    height: 100%;
   }
 
   .recipe p {
@@ -659,8 +659,9 @@ form > *:last-child {
 /* Tags */
 /*#########*/
 
-.tags-page {
+.tags-page {  
   display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 2rem;
   padding-bottom: 3rem;
 }
@@ -670,7 +671,6 @@ form > *:last-child {
   text-align: center;
   color: var(--white);
   transition: var(--transition);
-  padding: 0.75rem 0;
 }
 .tag:hover {
   background: var(--primary-500);
@@ -689,7 +689,7 @@ form > *:last-child {
 }
 @media screen and (min-width: 992px) {
   .tags-page {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
