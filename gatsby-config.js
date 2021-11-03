@@ -32,6 +32,7 @@ module.exports = {
         spaceId: "xl3cf4swv9m8",
       },
     },
+    'gatsby-plugin-netlify',
     "gatsby-plugin-image",
     "gatsby-transformer-remark",
     "gatsby-plugin-sharp",
