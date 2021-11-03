@@ -4,7 +4,7 @@ require("dotenv").config({
 
 module.exports = {
   flags: {
-    PARALLEL_QUERY_RUNNING: false
+    PARALLEL_QUERY_RUNNING: true
   },
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
@@ -61,30 +61,6 @@ module.exports = {
         path: `${__dirname}/src/assets/images`,
       },
       __key: "images",
-    },
-    // {
-    //   resolve: "gatsby-source-filesystem",
-    //   options: {
-    //     name: "pages",
-    //     path: `${__dirname}/src/pages/`,
-    //   },
-    //   __key: "pages",
-    // },
-    // {
-    //   resolve: "gatsby-source-filesystem",
-    //   options: {
-    //     name: "data",
-    //     path: `${__dirname}/src/assets/data/`,
-    //   },
-    //   __key: "data",
-    // },
-    // {
-    //   resolve: "gatsby-source-filesystem",
-    //   options: {
-    //     name: "styles",
-    //     path: `${__dirname}/src/assets/css`,
-    //   },
-    //   __key: "styles",
-    // },
-  ],
+    }
+  ]
 };
