@@ -4,7 +4,7 @@ require("dotenv").config({
 
 module.exports = {
   flags: {
-    PARALLEL_QUERY_RUNNING: true
+    PARALLEL_QUERY_RUNNING: false
   },
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
