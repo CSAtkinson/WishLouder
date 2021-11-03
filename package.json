@@ -39,6 +39,8 @@
     "styled-components": "^5.3.3"
   },
   "devDependencies": {
-    "cross-env": "^7.0.3"
+    "cross-env": "^7.0.3",
+    "gatsby-plugin-netlify": "^4.0.0-next.0",
+    "plugin-gatsby": "^2.0.0-beta"
   }
 }
